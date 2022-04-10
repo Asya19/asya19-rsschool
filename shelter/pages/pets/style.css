@@ -1,0 +1,442 @@
+html {
+    scroll-behavior: smooth;
+    transition: all 0.6s;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+main {
+    padding-top: 120px;
+}
+
+/* FONTS */
+@font-face {
+    font-family: Georgia_regular; 
+    src: url("/assets/fonts/georgia/georgia-regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+@font-face {
+    font-family: Arial_regular; 
+    src: url("/assets/fonts/arial/arial-regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+@font-face {
+    font-family: Arial_italic; 
+    src: url("/assets/fonts/arial/arial-italic.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+/* FONTS */
+
+
+@media screen and (min-width: 1300px) {
+    :root {
+        --width: 1280px;
+        --width_100: 100%;
+    }
+}
+    /* HEADER */
+        header {
+            position: fixed;
+            width: 100%;
+            background: #ffffff;
+            z-index: 10;
+        }
+        .border-header-container {
+            background: #FFFFFF;
+        }
+        .header-container {
+            width: 1280px;
+            height: 120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px 0 40px;
+            background: #FFFFFF;
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 16px;
+            cursor: pointer;
+        }
+        .logo-p1 {
+            font-family: Georgia_regular;
+            font-size: 32px;
+            color: #545454;
+            letter-spacing: 2px;
+            line-height: 2;
+            text-decoration: none;
+            font-weight: 100;
+        }
+        .logo-p2 {
+            font-family: Arial_regular;
+            font-size: 13px;
+            color: #292929;
+            letter-spacing: 1.3px;
+            line-height: 0.5;
+        }
+        .header-links ul {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        .header-links a {
+            display: flex;
+            color: #545454;
+            text-decoration: none;
+            font-family: Arial_regular;
+            font-size: 15px;
+            margin-top: 49px;
+        }
+        .header-links a:hover {
+            color: #292929;
+        }
+        .header-links ._active {
+            padding-bottom: 4px;
+            border-bottom: 3px solid #F1CDB3;
+            color: #292929;
+        }
+
+    /* HEADER */ 
+
+
+    /* SLIDER*/
+
+    .pets-slider {
+        width: 100%;
+        height: 1342px;
+        background: #F6F6F6;
+    }
+    .border-slider-container {
+        width: var(--width) - 40px;
+        height: 1162px;
+        margin: 0 auto;
+        padding: 80px 20px;
+    }
+    .slider {
+        width: var(--width);
+        height: 1162px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    h2 {
+        font-family: Georgia_regular;
+        font-size: 35px;
+        color: #545454;
+        line-height: 45px;
+        letter-spacing: 2.1px;
+        font-weight: 100;
+    }
+    .slider h2 {
+        width: 400px;
+        text-align: center;
+        margin: 1px -2px -31px 0;
+        color: #545454;
+        font-weight: 100;
+    }
+    .slider-container {
+
+        display: flex;
+        position: relative;
+        /* width: 7440px; */
+        top: 0;
+    }
+    /* BUTTONS */
+
+        .btn-slider-container {
+            display: flex;
+            width: 340px;
+            justify-content: space-between;
+        }
+
+        .btnArrowStyle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 2px solid #F1CDB3;
+            transition: .5s;
+            cursor: pointer;
+        }
+        .btnArrowStyle:hover {
+            background: #FDDCC4;
+            border: 2px solid #FDDCC4;
+            transition: .5s;
+        }
+        .btnArrowStyle img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 19px;
+        }
+        .bntLeft {
+            margin: 1px 2px 0 0;
+        }
+        .non_active:hover {
+            background: none;
+        }
+        .bntLeft.non_active{
+            filter: brightness(538%) contrast(61%);
+            cursor: auto;
+        }
+        .bntRight.non_active  {
+            filter: brightness(538%) contrast(61%);
+            cursor: auto;
+        }
+        .bntRight {
+            margin: 1px 3px 0 0;
+        }
+
+        .number_slide {
+            font-family: Georgia_regular;
+            font-size: 20px;
+            letter-spacing: 2px;
+            line-height: 20px;
+            width: 52px;
+            height: 52px;
+            background: #F1CDB3;
+            border-radius: 50px;
+            margin: 0 0 0 -2px;
+            transition: .5s;
+        }
+        .number_slide p {
+            text-align: center;
+            margin: 14px 0 0 0;
+        }
+    /* BUTTONS */
+
+    /* CARD */
+        .slide-container {
+            position: relative;
+            overflow: hidden;
+            width: var(--width) - 40px;
+        }
+        .container-all-slides {
+            position: relative;
+            width: 7440px;
+            display: flex;
+        }
+        .slide {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: var(--width) - 40px;
+        }
+
+        .container-slider {
+            overflow: hidden;
+            position: relative;
+            width: 1080px;
+        }
+        .container-all-card {
+
+            display: flex;
+            width: var(--width) - 40px;
+            margin: 0 auto;
+            overflow: hidden;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .slider-one-card {
+            padding: 30px 20px 0px 20px;
+        }
+        .card-content img {
+            border-radius: 9px 9px 0 0;
+        }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 9px;
+            transition: .5s;
+            background: #FAFAFA;
+            cursor: pointer;
+        }
+        .card-content p {
+            font-family: Georgia_regular;
+            font-size: 20px;
+            color: #545454;
+            letter-spacing: 1px;
+        }
+        .card-img {
+            margin: 0 0 26px 0;
+            transition: .5s;
+        }
+        .card-content:hover  .card-img {
+            filter: brightness(95%) contrast(100%);
+            transition: .5s;
+        }
+        .card-p {
+            margin: 0 0 31px 2px;
+        }
+
+        /* Button Learn More */
+            .btnLearnMore {
+                width: 187px;
+                height: 52px;
+                border: 2px solid #F1CDB3;
+                border-radius: 50px;
+                background: none;
+                transition: .5s;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+            .card-content:hover  .btnLearnMore {
+                background: #FDDCC4;
+                border: 2px solid #FDDCC4;
+                transition: .5s;
+            }
+            .btnGetKnow {
+                width: 261px;
+                height: 52px;
+                border: 1px solid #F1CDB3;
+                background: #F1CDB3;
+                border-radius: 50px;
+                transition: .5s;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 -2px -2px 0;
+            }
+            .btnGetKnow a {
+                letter-spacing: 1px;
+                line-height: 24px;
+                font-family: Georgia_regular;
+                font-size: 17px;
+                color: #292929;
+                text-decoration: none;
+                margin: -2px 0px 0 0;
+            }
+            .btnGetKnow:hover {
+                background: #FDDCC4;
+                border: 1px solid #FDDCC4;
+                transition: .5s;
+            }
+            button {
+                letter-spacing: 1px;
+                line-height: 24px;
+                font-family: Georgia_regular;
+                font-size: 17px;
+                color: #292929;
+            }
+        /* Button Learn More */
+
+    /* CARD */
+
+    /* SLIDER*/
+
+
+/* CONTACTS */
+.contacts-pages {
+    width: 100%;
+    height: 350px;
+    background: url(/assets/images/bg-img.png), radial-gradient(90% 215.42% at 0% 0%, #836751 0%, #121112);
+}
+.border-conracts-container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 28px 40px 0 40px;
+    height: 350px;
+}
+.contacts-content {
+    display: flex;
+    height: 309px;
+}
+.contacts-content h2 {
+    width: 310px;
+    color: #FFFFFF;
+    margin: 29px 0 32px 0;
+}
+
+/* contacts */
+    .contacts {
+        width: 302px;
+        margin-right: 137px;
+    }
+    .container-img-contacts {
+        display: flex;
+        justify-content: space-around;
+        margin: 44px 46px -1px 0;
+    }
+    .container-img-address {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 -36px 35px -11px;
+    }
+    .address {
+        width: 278px;
+        margin-right: 191px;
+    }
+    .contacts-img {
+        margin: 12px 0 0 -8px;
+        height: 310px;
+    }
+    .contacts-img img {
+        padding: 0;
+        margin: 0 0 -4px 0;
+    }
+    .cont-a {
+        font-family: Georgia_regular;
+        font-size: 20px;
+        letter-spacing: 1.1px;
+        color: #F1CDB3;
+        line-height: 24px;
+        font-weight: 100;
+        text-decoration: none;
+    }
+    .cont-p {
+        width: 260px;
+
+        font-family: Georgia_regular;
+        font-size: 20px;
+        letter-spacing: 1.1px;
+        color: #F1CDB3;
+        line-height: 24px;
+        font-weight: 100;
+        text-decoration: none;
+    }
+    .img-phone {
+        margin: -4px 20px 0px 0;
+    }
+    .img-email {
+        margin: -4px 9px 0 -7px;
+    }
+    .img-contact {
+        margin: -4px 0 0 0;
+    }
+/* contacts */
+
+
+/* CONTACTS */
+
+
+    @media screen and (max-width: 1280px) {
+        .header-container {
+            width: 1200px;
+        }
+        .pets-slider {
+            width: 1280px;
+        }
+        .contacts-pages {
+            width: 1280px;
+            height: 350px;
+        }
+    }
+
+
